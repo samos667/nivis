@@ -1,0 +1,3 @@
+{
+  plugins.jupytext.enable = true;
+}

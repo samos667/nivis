@@ -5,6 +5,7 @@
     ./floaterm.nix
     ./hardtime.nix
     ./harpoon.nix
+    ./jupytext.nix
     ./markdown-preview.nix
     ./mini.nix
     ./neo-tree.nix
