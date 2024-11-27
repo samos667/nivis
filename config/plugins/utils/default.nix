@@ -7,6 +7,7 @@
     ./harpoon.nix
     ./image.nix
     ./jupyter.nix
+    ./last-place.nix
     ./markdown-preview.nix
     ./mini.nix
     ./neo-tree.nix
