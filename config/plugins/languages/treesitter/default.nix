@@ -3,17 +3,18 @@
     treesitter = {
       enable = true;
       nixvimInjections = true;
+      folding = true;
       settings = {
         highlight.enable = true;
+        indent.enable = true;
       };
     };
   };
 
   imports = [
-    # ./context.nix # conflict with neorg + not really useful
     ./bqf.nix
     ./comment.nix
     ./hmts.nix
-    ./refactor.nix
+    # ./refactor.nix # laggy + not really useful
   ];
 }
