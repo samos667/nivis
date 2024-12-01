@@ -73,7 +73,7 @@
     }
     {
       mode = "n";
-      key = "<C-tab>";
+      key = "<A-tab>";
       action = "<cmd>e #<cr>";
       options = {
         desc = "Switch to Other Buffer";
