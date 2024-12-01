@@ -1,4 +1,4 @@
-{...}: {
+{
   plugins = {
     jupytext = {
       enable = true;
@@ -31,7 +31,6 @@
           svgwrite
           sympy
           tqdm
-          cairosvg
           kaleido
           matplotlib
         ];
@@ -40,7 +39,6 @@
         output_win_max_height = 40;
         output_win_max_width = 80;
         save_path.__raw = "vim.fn.stdpath('data')..'/molten'";
-        # tick_rate = 1000;
         wrap_output = true;
         image_provider = "image.nvim";
       };

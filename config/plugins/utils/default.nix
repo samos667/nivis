@@ -20,6 +20,7 @@
     ./todo.nix
     ./ufo.nix
     ./undotree.nix
+    ./wezterm.nix
     ./which-keys.nix
     ./wilder.nix
     ./yanky.nix

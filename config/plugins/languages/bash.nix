@@ -1,5 +1,5 @@
-{pkgs, ...}:{
-  extraPackages = with pkgs;[
+{pkgs, ...}: {
+  extraPackages = with pkgs; [
     beautysh
     shellcheck
   ];

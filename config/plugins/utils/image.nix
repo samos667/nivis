@@ -1,8 +1,7 @@
-{pkgs, ...}: {
+{
   plugins.image = {
     enable = true;
-    backend = "ueberzug";
-    ueberzugPackage = pkgs.ueberzugpp;
+    backend = "kitty";
     windowOverlapClearEnabled = true;
     windowOverlapClearFtIgnore = [
       "cmp_menu"
