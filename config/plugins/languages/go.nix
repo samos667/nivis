@@ -17,15 +17,13 @@
       templ.enable = true;
     };
 
-    conform-nvim = {
-      formattersByFt = {
-        go = [
-          "gofumpt"
-        ];
-        templ = [
-          "templ"
-        ];
-      };
+    conform-nvim.settings.formatters_by_ft = {
+      go = [
+        "gofumpt"
+      ];
+      templ = [
+        "templ"
+      ];
     };
   };
 }

@@ -8,19 +8,11 @@
   ];
 
   plugins = {
-    conform-nvim = {
-      formattersByFt = {
-        markdown = [
-          "prettierd"
-        ];
-      };
-    };
-    lint = {
-      lintersByFt = {
-        lua = [
-          "vale" # fix vale style path
-        ];
-      };
-    };
+    conform-nvim.settings.formatters_by_ft.markdown = [
+      "prettierd"
+    ];
+    lint.lintersByFt.lua = [
+      "vale" #TODO fix vale style path
+    ];
   };
 }

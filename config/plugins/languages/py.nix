@@ -10,12 +10,8 @@
     dap.extensions.dap-python.enable = true;
     lsp.servers.pyright.enable = true;
 
-    conform-nvim = {
-      formattersByFt = {
-        python = [
-          "black"
-        ];
-      };
-    };
+    conform-nvim.settings.formatters_by_ft.python = [
+      "black"
+    ];
   };
 }

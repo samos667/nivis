@@ -5,7 +5,7 @@
   ];
 
   plugins = {
-    lsp.servers.nil-ls = {
+    lsp.servers.nil_ls = {
       enable = true;
       settings.nix = {
         maxMemoryMB = 20000; #  home-manager need at least this...
@@ -16,17 +16,9 @@
       };
     };
 
-    conform-nvim = {
-      formattersByFt = {
-        nix = [
-          "alejandra"
-        ];
-      };
-    };
-    lint = {
-      lintersByFt = {
-        nix = ["nix"];
-      };
-    };
+    conform-nvim.settings.formatters_by_ft.nix = [
+      "alejandra"
+    ];
+    lint.lintersByFt.nix = ["nix"];
   };
 }

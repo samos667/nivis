@@ -9,12 +9,8 @@
       enable = true;
     };
 
-    conform-nvim = {
-      formattersByFt = {
-        terraform = [
-          "terraform_fmt"
-        ];
-      };
-    };
+    conform-nvim.settings.formatters_by_ft.terraform = [
+      "terraform_fmt"
+    ];
   };
 }

@@ -18,7 +18,7 @@
   plugins = {
     helm.enable = true;
     lsp.servers = {
-      helm-ls = {
+      helm_ls = {
         filetypes = ["helm"];
         enable = true;
       };
@@ -42,8 +42,8 @@
       };
     };
 
-    conform-nvim = {
-      formattersByFt = {
+    conform-nvim.settings = {
+      formatters_by_ft = {
         yaml = [
           "yamlfix"
         ];
@@ -51,13 +51,9 @@
           "jq"
         ];
       };
-      formatters = {
-        yamlfix = {
-          env = {
-            YAMLFIX_SECTION_WHITELINES = "1";
-            YAMLFIX_COMMENTS_WHITELINES = "1";
-          };
-        };
+      formatters.yamlfix.env = {
+        YAMLFIX_SECTION_WHITELINES = "1";
+        YAMLFIX_COMMENTS_WHITELINES = "1";
       };
     };
   };

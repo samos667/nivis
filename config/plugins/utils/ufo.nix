@@ -1,7 +1,9 @@
 {
   plugins.nvim-ufo = {
     enable = true;
-    enableGetFoldVirtText = true;
+    settings = {
+      enable_get_fold_virt_text = true;
+    };
   };
   # https://github.com/redhat-developer/yaml-language-server/issues/912
   extraConfigLua = ''

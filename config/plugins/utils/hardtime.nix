@@ -1,10 +1,12 @@
 {
   plugins.hardtime = {
     enable = true;
-    hint = true;
-    disableMouse = false;
-    maxCount = 4;
-    maxTime = 1000;
-    restrictionMode = "hint";
+    settings = {
+      hint = true;
+      disable_mouse = false;
+      maxCount = 4;
+      maxTime = 1000;
+      restriction_mode = "hint";
+    };
   };
 }

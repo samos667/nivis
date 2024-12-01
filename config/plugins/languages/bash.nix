@@ -7,20 +7,12 @@
   plugins = {
     lsp.servers.bashls.enable = true;
 
-    conform-nvim = {
-      formattersByFt = {
-        bash = [
-          "beautysh"
-        ];
-      };
-    };
+    conform-nvim.settings.formatters_by_ft.bash = [
+      "beautysh"
+    ];
 
-    lint = {
-      lintersByFt = {
-        bash = [
-          "shellcheck"
-        ];
-      };
-    };
+    lint.lintersByFt.bash = [
+      "shellcheck"
+    ];
   };
 }
