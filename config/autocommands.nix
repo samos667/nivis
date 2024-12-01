@@ -19,5 +19,11 @@
       pattern = ["tex" "latex" "markdown" "norg"];
       command = "setlocal spell spelllang=en,fr";
     }
+    # Init Quarto on md file
+    {
+      event = "FileType";
+      pattern = ["markdown"];
+      command = "QuartoActivate";
+    }
   ];
 }

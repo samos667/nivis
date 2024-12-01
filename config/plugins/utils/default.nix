@@ -14,6 +14,7 @@
     ./neorg.nix
     ./ollama.nix # require ollama services running.
     ./persistence.nix
+    ./quarto.nix
     ./spectre.nix
     ./telescope.nix
     ./todo.nix
