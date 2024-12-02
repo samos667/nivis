@@ -1,6 +1,7 @@
 {
   imports = [
     ./autopair.nix
+    ./autosave.nix
     ./colorizer.nix
     ./floaterm.nix
     ./hardtime.nix
