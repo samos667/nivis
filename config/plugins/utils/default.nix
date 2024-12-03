@@ -4,6 +4,7 @@
     ./autopair.nix
     ./autosave.nix
     ./colorizer.nix
+    ./direnv.nix
     ./floaterm.nix
     ./hardtime.nix
     ./harpoon.nix
