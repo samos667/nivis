@@ -23,7 +23,7 @@
   plugins = {
     lsp.servers.nushell.enable = true;
 
-    # TODO https://github.com/nushell/nufmt
+    # TODO https://github.com/nushell/nufmt # Actually broken
     # conform-nvim = {
     #   formattersByFt = {
     #     nu = [

@@ -28,5 +28,6 @@
     ./lint.nix
     ./lspsaga.nix
     ./trouble.nix
+    ./copilot.nix
   ];
 }

@@ -15,7 +15,7 @@
     ./mini.nix
     ./neo-tree.nix
     ./neorg.nix
-    ./ollama.nix # require ollama services running.
+    # ./ollama.nix # require ollama services running.
     ./persistence.nix
     ./quarto.nix
     ./spectre.nix

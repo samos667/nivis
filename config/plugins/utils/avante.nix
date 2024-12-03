@@ -2,14 +2,15 @@
   plugins.avante = {
     enable = true;
     settings = {
-      vendors = {
-        ollama = {
-          __inherited_from = "openai";
-          api_key_name = "";
-          endpoint = "http://127.0.0.1:11434/v1";
-          model = "finalend/hermes-3-llama-3.1";
-        };
-      };
+      provider = "copilot";
+      # vendors = {
+      #   ollama = {
+      #     __inherited_from = "openai";
+      #     api_key_name = "";
+      #     endpoint = "http://127.0.0.1:11434/v1";
+      #     model = "codegemma";
+      #   };
+      # };
       diff = {
         autojump = true;
         debug = false;
@@ -34,7 +35,6 @@
           theirs = "ct";
         };
       };
-      provider = "ollama";
       windows = {
         sidebar_header = {
           align = "center";
