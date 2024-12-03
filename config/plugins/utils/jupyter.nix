@@ -40,7 +40,12 @@
         output_win_max_width = 80;
         save_path.__raw = "vim.fn.stdpath('data')..'/molten'";
         wrap_output = true;
+        output_virt_lines = true;
+        output_crop_border = true;
         image_provider = "image.nvim";
+        cover_empty_lines = true;
+        enter_output_behavior = "open_then_enter";
+        auto_open_output = false;
       };
     };
   };
