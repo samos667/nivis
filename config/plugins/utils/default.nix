@@ -1,5 +1,6 @@
 {
   imports = [
+    ./avante.nix
     ./autopair.nix
     ./autosave.nix
     ./colorizer.nix
