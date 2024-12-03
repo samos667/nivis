@@ -7,5 +7,6 @@
     ./autocommands.nix
     ./keymappings.nix
     ./options.nix
+    ./performance.nix
   ];
 }
