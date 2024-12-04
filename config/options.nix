@@ -55,6 +55,7 @@
       # Better splitting
       splitbelow = true;
       splitright = true;
+      splitkeep = "screen";
 
       # Enable mouse mode
       mouse = "a"; # Mouse
