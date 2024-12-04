@@ -25,5 +25,10 @@
       pattern = ["markdown"];
       command = "QuartoActivate";
     }
+    {
+      event = "FileType";
+      pattern = ["markdown"]; #TODO enable nix support
+      command = ":lua require('otter').activate(languages, completion, diagnostics, tsquery)";
+    }
   ];
 }

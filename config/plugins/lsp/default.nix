@@ -25,8 +25,11 @@
 
   imports = [
     ./conform.nix
+    ./lines.nix
     ./lint.nix
     ./lspsaga.nix
+    ./otter.nix
+    ./signature.nix
     ./trouble.nix
     ./copilot.nix
   ];
