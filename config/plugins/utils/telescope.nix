@@ -130,15 +130,6 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>fp";
-      action = "<cmd>Telescope projects<CR>";
-      options = {
-        desc = "Projects";
-      };
-    }
-
-    {
-      mode = "n";
       key = "<leader>sd";
       action = "<cmd>Telescope diagnostics bufnr=0<cr>";
       options = {
@@ -148,22 +139,12 @@
 
     {
       mode = "n";
-      key = "<leader>st";
-      action = "<cmd>TodoTelescope<cr>";
+      key = "<leader>fc";
+      action = "<cmd>Telescope command_history<cr>";
       options = {
-        silent = true;
-        desc = "Todo (Telescope)";
+        desc = "Command history";
       };
     }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>,";
-    #   action = "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>";
-    #   options = {
-    #     desc = "Switch Buffer";
-    #   };
-    # }
   ];
   extraConfigLua = ''
     local telescope = require('telescope')
