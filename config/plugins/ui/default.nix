@@ -3,7 +3,7 @@
     ./alpha.nix
     ./bufferline.nix
     ./dressing.nix
-    ./edgy.nix
+    # ./edgy.nix
     ./icon.nix
     ./indent-blankline.nix
     # ./lualine.nix
