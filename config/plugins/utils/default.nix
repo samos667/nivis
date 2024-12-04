@@ -13,6 +13,7 @@
     ./last-place.nix
     ./markdown-preview.nix
     ./mini.nix
+    ./navbuddy.nix
     ./neo-tree.nix
     ./neorg.nix
     # ./ollama.nix # require ollama services running.
