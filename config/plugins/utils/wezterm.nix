@@ -11,4 +11,25 @@
       };
     })
   ];
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>wv";
+      action = ":lua require('wezterm').split_pane.vertical()<cr>";
+      options = {
+        silent = true;
+        desc = "Add a vertical split pane";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>wh";
+      action = ":lua require('wezterm').split_pane.horizontal()<cr>";
+      options = {
+        silent = true;
+        desc = "Add a horizontal split pane";
+      };
+    }
+  ];
 }
