@@ -148,7 +148,10 @@
         g.neovide_refresh_rate = 360
         g.neovide_cursor_vfx_mode = "ripple"
         g.neovide_cursor_smooth_blink = true
-        g.neovide_transparency = 0.8
+        g.transparency = 0
+        g.neovide_transparency = 0.9
+        g.neovide_floating_blur_amount_x = 2.0
+        g.neovide_floating_blur_amount_y = 2.0
 
         -- Neovide Fonts
         o.guifont = "FiraCode Nerd Font:h16:#e-subpixelantialias:#h-none"

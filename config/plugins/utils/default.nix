@@ -8,7 +8,7 @@
     ./floaterm.nix
     ./hardtime.nix
     ./harpoon.nix
-    ./image.nix
+    # ./image.nix
     ./jupyter.nix
     ./last-place.nix
     ./markdown-preview.nix
@@ -21,6 +21,7 @@
     ./project.nix
     ./quarto.nix
     ./spectre.nix
+    # ./suda.nix
     ./telescope.nix
     ./todo.nix
     ./ufo.nix
