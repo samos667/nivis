@@ -31,6 +31,6 @@
     ./otter.nix
     ./signature.nix
     ./trouble.nix
-    ./copilot.nix
+    # ./copilot.nix
   ];
 }
