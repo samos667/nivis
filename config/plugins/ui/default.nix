@@ -7,6 +7,7 @@
     ./icon.nix
     ./indent-blankline.nix
     # ./lualine.nix
+    # ./neo-tree.nix
     ./staline.nix
     ./noice.nix
     ./nvim-notify.nix
