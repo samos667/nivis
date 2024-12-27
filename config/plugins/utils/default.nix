@@ -19,6 +19,7 @@
     ./persistence.nix
     ./project.nix
     ./quarto.nix
+    ./sops.nix
     ./spectre.nix
     # ./suda.nix
     ./telescope.nix
