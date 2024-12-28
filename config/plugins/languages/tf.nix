@@ -4,9 +4,13 @@
   plugins = {
     treesitter.languageRegister.terraform = "tf";
 
-    lsp.servers.terraformls = {
-      filetypes = ["tf"];
-      enable = true;
+    lsp.servers = {
+      terraformls = {
+        enable = true;
+      };
+      tflint = {
+        enable = true;
+      };
     };
 
     conform-nvim.settings.formatters_by_ft.terraform = [
