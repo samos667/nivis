@@ -364,12 +364,6 @@
       key = "<leader>c";
       action = "+code";
     }
-
-    {
-      mode = ["n" "v"];
-      key = "<leader>t";
-      action = "+test";
-    }
   ];
   extraConfigLua = ''
     local notify = require("notify")
