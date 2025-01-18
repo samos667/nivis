@@ -14,7 +14,7 @@
     ./markdown-preview.nix
     ./mini.nix
     ./navbuddy.nix
-    ./neorg.nix
+    # ./neorg.nix
     # ./ollama.nix # require ollama services running.
     ./persistence.nix
     ./project.nix
