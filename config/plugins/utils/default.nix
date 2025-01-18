@@ -26,6 +26,7 @@
     ./todo.nix
     ./ufo.nix
     ./undotree.nix
+    ./vifm.nix
     ./wezterm.nix
     ./which-keys.nix
     ./wilder.nix
