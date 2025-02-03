@@ -6,7 +6,7 @@
     ./colorizer.nix
     ./direnv.nix
     ./floaterm.nix
-    ./hardtime.nix
+    # ./hardtime.nix
     ./harpoon.nix
     # ./image.nix
     ./jupyter.nix
@@ -24,7 +24,7 @@
     # ./suda.nix
     ./telescope.nix
     ./todo.nix
-    ./ufo.nix
+    # ./ufo.nix
     ./undotree.nix
     ./vifm.nix
     ./wezterm.nix
