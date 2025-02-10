@@ -145,7 +145,9 @@
         a.nvim_set_keymap('i', '<C-v>', '<C-R>+', { noremap = true, silent = true})
         a.nvim_set_keymap('n', '<C-v>', '<C-R>+', { noremap = true, silent = true})
         g.neovide_fullscreen = false
-        g.neovide_refresh_rate = 360
+        g.neovide_refresh_rate_idle = 5
+        g.neovide_floating_shadow = false
+        g.neovide_cursor_vfx_particle_speed = 20.0
         g.neovide_cursor_vfx_mode = "ripple"
         g.neovide_cursor_smooth_blink = true
         g.transparency = 0
