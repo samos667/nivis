@@ -9,8 +9,8 @@
 
   plugins = {
     dap.extensions.dap-go.enable = true;
-    neotest.enable = true;
-    neotest.adapters.go.enable = true;
+    # neotest.enable = true;
+    # neotest.adapters.go.enable = true;
 
     lsp.servers = {
       gopls.enable = true;
