@@ -154,6 +154,12 @@
         g.neovide_transparency = 0.9
         g.neovide_floating_blur_amount_x = 2.0
         g.neovide_floating_blur_amount_y = 2.0
+        vim.api.nvim_set_keymap('v', '<sc-c>', '"+y', {noremap = true})
+        vim.api.nvim_set_keymap('n', '<sc-v>', 'l"+P', {noremap = true})
+        vim.api.nvim_set_keymap('v', '<sc-v>', '"+P', {noremap = true})
+        vim.api.nvim_set_keymap('c', '<sc-v>', '<C-o>l<C-o>"+<C-o>P<C-o>l', {noremap = true})
+        vim.api.nvim_set_keymap('i', '<sc-v>', '<ESC>l"+Pli', {noremap = true})
+        vim.api.nvim_set_keymap('t', '<sc-v>', '<C-\\><C-n>"+Pi', {noremap = true})
 
         -- Neovide Fonts
         o.guifont = "FiraCode Nerd Font:h16"
