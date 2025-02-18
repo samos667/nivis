@@ -141,9 +141,6 @@
         -- Neovide
       if g.neovide then
         -- Neovide options
-        a.nvim_set_keymap('c', '<C-v>', '<C-R>+', { noremap = true, silent = true})
-        a.nvim_set_keymap('i', '<C-v>', '<C-R>+', { noremap = true, silent = true})
-        a.nvim_set_keymap('n', '<C-v>', '<C-R>+', { noremap = true, silent = true})
         g.neovide_fullscreen = false
         g.neovide_refresh_rate_idle = 5
         g.neovide_floating_shadow = false
@@ -154,6 +151,9 @@
         g.neovide_transparency = 0.9
         g.neovide_floating_blur_amount_x = 2.0
         g.neovide_floating_blur_amount_y = 2.0
+        vim.api.nvim_set_keymap("v", "<c-c>", '"+y', { noremap = true }) -- Select line(s) in visual mode and copy (CTRL+v)
+        vim.api.nvim_set_keymap("i", "<c-v>", '<ESC>"+p', { noremap = true }) -- Paste in insert mode (CTRL+c)
+        vim.api.nvim_set_keymap("n", "<c-v>", '"+p', { noremap = true }) -- Paste in normal mode (CTRL+c)
 
         -- Neovide Fonts
         o.guifont = "FiraCode Nerd Font:h16"
