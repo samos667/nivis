@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  extraPackages = with pkgs; [terraform];
+  extraPackages = with pkgs; [opentofu];
 
   plugins = {
     treesitter.languageRegister.terraform = "tf";
@@ -14,7 +14,7 @@
     };
 
     conform-nvim.settings.formatters_by_ft.terraform = [
-      "terraform_fmt"
+      "tofu_fmt"
     ];
   };
 }
