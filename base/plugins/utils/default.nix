@@ -13,7 +13,6 @@
     ./navbuddy.nix
     ./neorg.nix
     ./persisted.nix
-    ./project.nix
     ./sops.nix
     ./spectre.nix
     ./telescope.nix

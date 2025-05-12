@@ -1,4 +1,16 @@
-{
+{pkgs, ...}: {
+  extraPlugins = with pkgs.vimUtils; [
+    (buildVimPlugin {
+      pname = "telescope-repo.nvim";
+      version = "2025-01-21";
+      src = pkgs.fetchFromGitHub {
+        owner = "cljoly";
+        repo = "telescope-repo.nvim";
+        rev = "a5395a4bf0fd742cc46b4e8c50e657062f548ba9";
+        hash = "sha256-cIovB45hfG4lDK0VBIgK94dk2EvGXZtfAJETkQ+lrcw=";
+      };
+    })
+  ];
   plugins.telescope = {
     enable = true;
 
@@ -31,7 +43,23 @@
           };
         };
       };
+      extensions = {
+        repo = {
+          list = {
+            fd_opts = [
+              "--no-ignore-vcs"
+            ];
+            search_dirs = ["/home/setur/Documents/git/"];
+          };
+          settings = {
+            auto_lcd = true;
+          };
+        };
+      };
     };
+
+    enabledExtensions = ["repo"];
+
     keymaps = {
       "<leader><space>" = {
         action = "find_files";
@@ -143,6 +171,16 @@
       action = "<cmd>Telescope command_history<cr>";
       options = {
         desc = "Command history";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fd";
+      action = "<cmd>Telescope repo list<cr>";
+      options = {
+        silent = true;
+        desc = "List projects";
       };
     }
   ];
