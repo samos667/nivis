@@ -1,0 +1,26 @@
+{
+  imports = [
+    ./autocenter.nix
+    ./autopair.nix
+    ./colorizer.nix
+    ./direnv.nix
+    ./floaterm.nix
+    ./harpoon.nix
+    ./last-place.nix
+    ./lazyload.nix
+    ./markdown-preview.nix
+    ./mini.nix
+    ./navbuddy.nix
+    ./neorg.nix
+    ./persisted.nix
+    ./sops.nix
+    ./spectre.nix
+    ./telescope.nix
+    ./todo.nix
+    ./ufo.nix
+    ./undotree.nix
+    ./which-keys.nix
+    ./wilder.nix
+    ./yanky.nix
+  ];
+}

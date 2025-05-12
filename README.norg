@@ -1,10 +1,22 @@
 * Nivis
   Still work in progress.
   0.0.1 released the 11/11/24
-** Features
-   - Modular as possible
-   - Oriented IAC languages
-   - Catppuccinist
+** Constitution
+   ~ Catppuccinist
+   ~ Modular
+   ~ Minimal
+
+** Add-ons
+   Following article 2 LSP/DAP/tweaks for languages expect core/default ones(nix, yaml/json, md, shell/bash/nu) are optionals.
+   There are:
+
+   - {./addons/py.nix}[Python] `nix run github:samos667/nivis#py`
+   - {./addons/lua.nix}[Lua] `nix run github:samos667/nivis#lua`
+   - {./addons/go.nix}[Go] `nix run github:samos667/nivis#go`
+   - {./addons/tf.nix}[Terraform] `nix run github:samos667/nivis#tf`
+   - all of previous ones `nix run github:samos667/nivis#all`
+
+   And can be all used with the `all` add-ons
 ** S/O
    I'm relatively new to Nvim and more globally IDE rabbit hole. There is some public dot that help me a lot to start to play around.
    Especially:
