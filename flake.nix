@@ -2,51 +2,49 @@
   description = "Highly modular Nixvim declaration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-    };
-    flake-utils.url = "github:numtide/flake-utils";
+    nixvim.url = "github:nix-community/nixvim";
+    nixpkgs.follows = "nixvim/nixpkgs";
   };
 
   outputs = {
-    self,
-    nixpkgs,
     nixvim,
-    flake-utils,
+    nixpkgs,
     ...
-  } @ inputs: let
-    config = import ./config; # import the module directly
-  in
-    flake-utils.lib.eachDefaultSystem (system: let
-      nixvimLib = nixvim.lib.${system};
-      pkgs = import inputs.nixpkgs {
-        config.allowUnfree = true;
-        inherit system;
-      };
+  }: let
+    systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+
+    # Centralized add-on definitions
+    addons = {
+      py = import ./addons/py.nix;
+      go = import ./addons/go.nix;
+      lua = import ./addons/lua.nix;
+      tf = import ./addons/tf.nix;
+    };
+  in {
+    packages = forAllSystems (system: let
       nixvim' = nixvim.legacyPackages.${system};
-      nvim = nixvim'.makeNixvimWithModule {
-        inherit pkgs;
-        module = config;
-        # You can use `extraSpecialArgs` to pass additional arguments to your module files
-        extraSpecialArgs = {
-          inherit self;
-        };
-      };
-    in {
-      checks = {
-        # Run `nix flake check .` to verify that your config is not broken
-        default = nixvimLib.check.mkTestDerivationFromNvim {
-          inherit nvim;
-          name = "Nivis";
-        };
-      };
 
-      packages = {
-        # Lets you run `nix run .` to start nixvim
-        default = nvim;
-      };
+      # Reusable module constructor
+      mkNvimPackage = extraModules:
+        nixvim'.makeNixvim ([
+            (import ./base) # Base configuration
+          ]
+          ++ extraModules);
 
-      formatter = pkgs.alejandra;
-    });
+      # Generate individual add-on packages
+      addonPackages =
+        nixpkgs.lib.mapAttrs'
+        (name: module: {
+          name = name;
+          value = mkNvimPackage [module];
+        })
+        addons;
+    in
+      {
+        default = mkNvimPackage []; # Base configuration
+        all = mkNvimPackage (builtins.attrValues addons); # All add-ons
+      }
+      // addonPackages); # Dynamically generated add-on specific packages
+  };
 }
