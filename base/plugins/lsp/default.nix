@@ -1,6 +1,7 @@
 {
   plugins = {
     lsp = {
+      inlayHints = true;
       enable = true;
       keymaps = {
         silent = true;
@@ -26,7 +27,6 @@
   imports = [
     ./conform.nix
     ./lines.nix
-    ./lint.nix
     ./lspsaga.nix
     ./signature.nix
     ./trouble.nix
