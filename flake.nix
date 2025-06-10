@@ -20,6 +20,7 @@
       go = import ./addons/go.nix;
       lua = import ./addons/lua.nix;
       tf = import ./addons/tf.nix;
+      rs = import ./addons/rs.nix;
     };
   in {
     packages = forAllSystems (system: let
