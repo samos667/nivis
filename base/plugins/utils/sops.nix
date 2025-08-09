@@ -11,6 +11,9 @@
       };
     })
   ];
+  extraPackages = with pkgs; [
+    sops
+  ];
   keymaps = [
     {
       mode = "n";
